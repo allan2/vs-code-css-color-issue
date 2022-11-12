@@ -1,0 +1,10 @@
+// this bug happens when there are non-hex variables
+$hex: #ff0000;
+$rgb: rgb(255, 0, 0);
+$rgba: rgba(255, 0, 0, 1);
+$string: red;
+
+// variables leak from other file
+.foo {
+    color: $hex;
+}
